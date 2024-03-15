@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class DNDCharacterGen extends JFrame{
     private JLabel characterLabel;
+    private JLabel instructionLabel;
     private JButton generateBTN;
     private CharacterGen characterGen;
 
@@ -17,33 +18,36 @@ public class DNDCharacterGen extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-        
+        JPanel panel = new JPanel(new BorderLayout());
 
         characterLabel = new JLabel("", SwingConstants.CENTER);
-        panel.add(characterLabel);
+        panel.add(characterLabel, BorderLayout.CENTER);
 
-        generateBTN = new JButton("Generate Character");
-        generateBTN.setSize(160, 30);
-        generateBTN.setBounds(60, 60, 160, 30);
+        instructionLabel = new JLabel("Click to Generate Character!", SwingConstants.CENTER);
+        panel.add(instructionLabel, BorderLayout.CENTER);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); // Use FlowLayout for buttonPanel
+        generateBTN = new JButton("Generate");
         generateBTN.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e){
+            public void actionPerformed(ActionEvent e) {
                 generateCharacter();
-            }    
+            }
         });
-        panel.add(generateBTN);
+        buttonPanel.add(generateBTN);
+        panel.add(buttonPanel, BorderLayout.SOUTH);
 
         add(panel);
         setVisible(true);
 
         
-        
+        characterGen = new CharacterGen();
     }
 
     private void generateCharacter(){
-
+        String character = characterGen.generateCharacter();
+        characterLabel.setText(character);
+        setSize(500,500);
     }
 
     public static void main(String[] args){
