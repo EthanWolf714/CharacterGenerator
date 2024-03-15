@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class DNDCharacterGen extends JFrame{
     private JLabel characterLabel;
@@ -46,7 +45,7 @@ public class DNDCharacterGen extends JFrame{
 
     private void generateCharacter(){
         String character = characterGen.generateCharacter();
-        characterLabel.setText(character);
+        instructionLabel.setText(character);
         setSize(500,500);
     }
 
