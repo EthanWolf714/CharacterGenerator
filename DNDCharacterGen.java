@@ -46,7 +46,7 @@ public class DNDCharacterGen extends JFrame{
     private void generateCharacter(){
         String character = characterGen.generateCharacter();
         instructionLabel.setText(character);
-        setSize(500,500);
+        
     }
 
     public static void main(String[] args){
