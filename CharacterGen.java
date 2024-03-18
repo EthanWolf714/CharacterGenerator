@@ -2,10 +2,8 @@ import java.util.Random;
 
 public class CharacterGen{
     private String[] classes = {"Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"};
-    private String[] subClasses;
     private String[] races = {"Dragonborn", "Dwarf", "Elf", "Gnome", "Half-elf", "Halfling", " Half-Orc", "Human", "Tiefling"};
-    private String[] subRaces;
-
+    private int[] stats = {};
     public String  generateCharacter(){
         Random random = new Random();
 
@@ -17,6 +15,7 @@ public class CharacterGen{
         int classIndex = random.nextInt(classes.length);
         String characterClass = classes[classIndex];
 
+        
         
         
 
