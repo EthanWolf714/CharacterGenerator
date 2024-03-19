@@ -23,7 +23,7 @@ public class CharacterGen{
         
 
         String characterDescription = "<html>" +"Race: "+ race + "<br>" +"Class: " + characterClass + 
-        "<br>" + Arrays.toString(stats) +"</html>";
+        "<br>" + "Stats:" + Arrays.toString(stats) +"</html>";
         return characterDescription;
     }
 
