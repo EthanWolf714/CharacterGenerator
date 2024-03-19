@@ -11,9 +11,10 @@ public class DNDCharacterGen extends JFrame{
 
 
     public DNDCharacterGen(){
-
+        ImageIcon img = new ImageIcon("C:\Users\Emwol\source\repos\RandCharGen\RandomCharacterGenerator\DNDCharacterGen.java");
         setTitle("D&D Character Generator");
-        setSize(300, 200);
+        this.setIconImage(img.getImage());
+        setSize(350, 200);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
 
