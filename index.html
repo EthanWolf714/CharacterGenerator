@@ -12,41 +12,35 @@
 </head>
 
 <body>
-    <div>
+    <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                  <h2>Character Generator</h2>
              </div>
-         </div>
-    </div>
-    
+         </div>  
      
-    <div class="container">
+   
     
         <form>
-            <div class="row justify-content-center">
-                <div class="form-group col-md-5">
-                    <label for="inputName">Name:</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Name">
-                </div>
+            <div class="form-section">
+                <div class="row justify-content-center">
+                    <div class="form-group col-md-5">
+                        <label for="inputName">Name:</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                    </div>
+                 </div>
             </div>
-
-            
-                <div class="form-group-row">
-                    <p></p>
-                    <p></p>
-                </div>
-           
-    
-            <div class="row justify-content-end">
-                <div class="form-group col-md-3">
+           <div class="form-section">
+            <h4 class="text-center">Character Details</h4>
+            <div class="row justify-content-center">
+                <div class="form-group col-md-4">
                     <label for="inputClass">Class:</label>
                     <select id="inputClass" class="form-control">
                         <option selected>Choose Class</option>
                         <option>Ranger</option>
                     </select>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label for="inputBackground">Background:</label>
                     <select id="inputBackground" class="form-control">
                         <option selected>Choose Background</option>
@@ -54,15 +48,15 @@
     
                 </div>
             </div>
-                <div class="row justify-content-end">
-                    <div class="form-group col-md-3">
+                <div class="row justify-content-center">
+                    <div class="form-group col-md-4">
                         <label for="inputRace">Race:</label>
                         <select id="inputRace" class="form-control">
                             <option selected>Choose Race</option>
                             <option>Elf</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-4">
                         <label for="inputAlign">Alignment:</label>
                         <select id="inputAlign" class="form-control">
                             <option selected>Choose Alignment</option>
@@ -70,6 +64,38 @@
         
                     </div>
                 </div>
+           </div>
+           <div class="form-section">
+             <h4 class="text-center">Character Stats</h4>
+                <div class="row justify-content-center">
+                    <div class=" form-group col-md-4">
+                        <p id="stat">Str:</p>
+                        <p id="stat">Dex:</p>
+                        <p id="stat">Con:</p>
+                        <p id="stat">Int:</p>
+                        <p id="stat">Wis:</p>
+                        <p id="stat">Cha:</p>   
+                    </div>
+                </div>
+                <div id="statsContainer" class="row">
+                    <div class="col">
+                        
+                    </div> 
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-center">
+                        <button class="btn btn-secondary">Roll stats</button>
+                    </div> 
+                </div>
+           </div>
+           
+           <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <button type="submit" class="btn btn-primary">Generate Character</button>
+
+                </div>
+           </div>
+           
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
