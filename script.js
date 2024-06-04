@@ -1,5 +1,8 @@
-var classes = ['Artifcier','Barbarian', 'Bard', 'Cleric','Druid', 'Fighter','Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorccerer', 'Warlock', 'Wizard'];
-var races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome','Half-elf', 'Halfings','Half-orc','Human','Tiefling'];
+
+
+window.onload = function(){
+    populateSelectBox();
+}
 
 
 
@@ -8,7 +11,19 @@ var races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome','Half-elf', 'Halfings','Half-
 
 
 function populateSelectBox(){
+    var selectClass = document.getElementById('inputClass');
+    var classes = ['Artifcier','Barbarian', 'Bard', 'Cleric','Druid', 'Fighter','Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorccerer', 'Warlock', 'Wizard'];
+    //var races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome','Half-elf', 'Halfings','Half-orc','Human','Tiefling'];
+    
 
+    for(let i = 0; i < classes.length; i++){
+        var  opt = classes[i];
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        selectClass.appendChild(el);
+    }
+    
 }
 
 
