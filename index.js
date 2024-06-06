@@ -99,7 +99,7 @@ function subRaceOptions() {
     } else {
         const defaultOption = document.createElement("option");
         defaultOption.value = '';
-        defaultOption.text = "No subrace available";
+        defaultOption.text = 'No subrace available';
         subraceSelect.appendChild(defaultOption);
 
     }
