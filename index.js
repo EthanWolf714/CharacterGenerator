@@ -144,4 +144,6 @@ function subClassOptions() {
 
 }
 
-
+function submitResults(){
+    window.location = "results.html"
+}
