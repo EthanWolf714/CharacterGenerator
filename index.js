@@ -145,6 +145,7 @@ function subClassOptions() {
 }
 
 function submitCharacter(){
+    event.preventDefault();
     const character = {
         name: document.getElementById('inputName').value,
         class: document.getElementById('inputClass').value,
@@ -163,8 +164,6 @@ function submitCharacter(){
         }
     };
     localStorage.setItem('character', JSON.stringify(character));
-    window.location.href = 'results.html';
-
-
-    
+    window.location.href = 'results.html'; 
+    return false;
 }

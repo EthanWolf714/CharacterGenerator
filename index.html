@@ -23,7 +23,7 @@
      
    
     
-        <form id="character-form">
+        <form id="character-form" onsubmit="return submitCharacter(event)">
             <div class="form-section">
                 <div class="row justify-content-center">
                     <div class="form-group col-md-5">
@@ -106,7 +106,7 @@
            
            <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <button type="submit" class="btn btn-primary" onclick="submitResults()">Generate Character</button>
+                    <button type="submit" class="btn btn-primary" onclick="submitCharacter()">Generate Character</button>
 
                 </div>
            </div>
