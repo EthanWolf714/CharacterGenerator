@@ -144,6 +144,27 @@ function subClassOptions() {
 
 }
 
-function submitResults(){
-    window.location = "results.html"
+function submitCharacter(){
+    const character = {
+        name: document.getElementById('inputName').value,
+        class: document.getElementById('inputClass').value,
+        subclass: document.getElementById('inputSubclass').value,
+        background: document.getElementById('inputBackground').value,
+        race: document.getElementById('inputRace').value,
+        subrace: document.getElementById('inputSubrace').value,
+        alignment: document.getElementById('inputAlign').value,
+        stats: {
+            str: document.getElementById('str').textContent,
+            dex: document.getElementById('dex').textContent,
+            con: document.getElementById('con').textContent,
+            int: document.getElementById('int').textContent,
+            wis: document.getElementById('wis').textContent,
+            cha: document.getElementById('cha').textContent
+        }
+    };
+    localStorage.setItem('character', JSON.stringify(character));
+    window.location.href = 'results.html';
+
+
+    
 }
