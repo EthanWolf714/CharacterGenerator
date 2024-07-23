@@ -146,7 +146,7 @@ function subClassOptions() {
 
 
 
-function submitCharacter(){
+function submitCharacter(event){
     event.preventDefault();
     const character = {
         name: document.getElementById('inputName').value,
