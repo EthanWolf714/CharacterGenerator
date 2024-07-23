@@ -144,6 +144,8 @@ function subClassOptions() {
 
 }
 
+
+
 function submitCharacter(){
     event.preventDefault();
     const character = {
