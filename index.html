@@ -60,7 +60,7 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-md-4">
                         <label for="inputRace">Race:</label>
-                        <select id="inputRace" class="form-control" onchange="subRaceOptions()">
+                        <select id="inputRace" class="form-control" onchange="subRaceOptions()" onchange="raceStatBonus()">
                             <option selected>Choose Race</option>
                         </select>
                         
@@ -86,15 +86,13 @@
              <h4 class="text-center">Character Stats</h4>
                 <div class="row justify-content-center">
                     <div class=" form-group col-md-1">
-                        <p>Str:<span id="str">-</span></p>
-                        <p>Dex:<span id="dex">-</span></p>
-                        <p>Con:<span id="con">-</span></p>
-                        <p>Int:<span id="int">-</span></p>
-                        <p>Wis:<span id="wis">-</span></p>
-                        <p>Cha:<span id="cha">-</span></p>
+                        <p>Str: <span id="str">-</span> <span id="strBonus"></span></p>
+                        <p>Dex: <span id="dex">-</span> <span id="dexBonus"></span></p>
+                        <p>Con: <span id="con">-</span> <span id="conBonus"></span></p>
+                        <p>Int: <span id="int">-</span> <span id="intBonus"></span></p>
+                        <p>Wis: <span id="wis">-</span> <span id="wisBonus"></span></p>
+                        <p>Cha: <span id="cha">-</span> <span id="chaBonus"></span></p>
                     </div>
-                    
-                
                 </div>
                 
                 <div class="row justify-content-center">

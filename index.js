@@ -68,6 +68,7 @@ function genStats() {
     document.getElementById('int').innerText = randomStat();
     document.getElementById('wis').innerText = randomStat();
     document.getElementById('cha').innerText = randomStat();
+    raceStatBonus();
 }
 
 
@@ -79,15 +80,15 @@ function subRaceOptions() {
     subraceSelect.innerHTML = '';
 
     const subraces = {
-        'Dragonborn': [],
+        'Dragonborn': ['none'],
         'Dwarf': ['Hill Dwarf', 'Mountain Dwarf'],
         'Elf': ['Dark-Elf(Drow)', 'High-elf', 'Wood-elf'],
         'Gnome': ['Forest Gnome', 'Rock Gnome'],
-        'Half-elf': [],
+        'Half-elf': ['none'],
         'Halfings': ['Lightfoot Halfling', 'Stout Halfling'],
-        'Half-orc': [],
-        'Human': [],
-        'Tiefling': [],
+        'Half-orc': ['none'],
+        'Human': ['none'],
+        'Tiefling': ['none'],
     };
 
     if (subraces[race]) {
@@ -144,7 +145,36 @@ function subClassOptions() {
 
 }
 
+function raceStatBonus(){
+    const charRace = document.getElementById('inputRace').value;
+    resetBonus();
+    switch (charRace) {
+        case 'Dragonborn':
+            displayBonus('strBonus', 2);
+            displayBonus('chaBonus', 1);
+            break;
+        case 'Dwarf':
+            displayBonus('conBonus', 2);
+            break;
+        default:
+            break;
+    }
+}
 
+
+function displayBonus(id, bonus){
+    console.log(`Displaying bonus for ${id}: +${bonus}`);
+    const el = document.getElementById(id);
+    el.textContent = `+${bonus}`;
+    
+}
+
+function resetBonus(){
+    const bonusIds = ['strBonus', 'dexBonus', 'conBonus', 'intBonus', 'wisBonus', 'chaBonus'];
+    bonusIds.forEach(id =>{
+        document.getElementById(id).textContent = '';
+    });
+}
 
 function submitCharacter(event){
     event.preventDefault();
