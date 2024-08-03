@@ -8,3 +8,8 @@
 .main{
     font-size: larger;
 }
+
+.mainInfo{
+    border-style: ridge;
+    border-radius: 20px;
+}
