@@ -156,6 +156,45 @@ function raceStatBonus(){
         case 'Dwarf':
             displayBonus('conBonus', 2);
             break;
+        case 'Elf':
+            
+        case 'Gnome':
+
+        case 'Half-Elf':
+
+        case 'Halflings':
+
+        case 'Half-Orc':
+
+        case 'Human':
+
+        case 'Tiefling':
+        default:
+            break;
+    }
+}
+
+function subRaceStatBonus(){
+    const charSubRace = document.getElementById('inputSubrace').value;
+    resetBonus();
+    switch(charSubRace) {
+        case 'Hill Dwarf':
+
+        case 'Mountain Dwarf':
+
+        case 'Dark-Elf(Drow)':
+
+        case 'High-elf':
+
+        case 'Wood-elf':
+
+        case 'Forest Gnome':
+
+        case 'Rock Gnome':
+
+        case 'Lightfoot Halfling':
+
+        case 'Stout Halfling':
         default:
             break;
     }
