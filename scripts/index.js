@@ -5,7 +5,7 @@ window.onload = function () {
     subRaceOptions();
     subClassOptions();
 }
-var classes = ['Artifcier', 'Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorccerer', 'Warlock', 'Wizard'];
+var classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorccerer', 'Warlock', 'Wizard'];
 var races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-elf', 'Halfings', 'Half-orc', 'Human', 'Tiefling'];
 var alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Nuetral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
@@ -73,78 +73,6 @@ function genStats() {
 
 
 
-
-function subRaceOptions() {
-    const race = document.getElementById('inputRace').value;
-    const subraceSelect = document.getElementById('inputSubrace');
-    subraceSelect.innerHTML = '';
-
-    const subraces = {
-        'Dragonborn': ['none'],
-        'Dwarf': ['Hill Dwarf', 'Mountain Dwarf'],
-        'Elf': ['Dark-Elf(Drow)', 'High-elf', 'Wood-elf'],
-        'Gnome': ['Forest Gnome', 'Rock Gnome'],
-        'Half-elf': ['none'],
-        'Halfings': ['Lightfoot Halfling', 'Stout Halfling'],
-        'Half-orc': ['none'],
-        'Human': ['none'],
-        'Tiefling': ['none'],
-    };
-
-    if (subraces[race]) {
-        subraces[race].forEach(subrace => {
-            const option = document.createElement('option');
-            option.value = subrace;
-            option.text = subrace;
-            subraceSelect.appendChild(option);
-        });
-    } else {
-        const defaultOption = document.createElement("option");
-        defaultOption.value = '';
-        defaultOption.text = 'No subrace available';
-        subraceSelect.appendChild(defaultOption);
-
-    }
-}
-function subClassOptions() {
-    const charClass = document.getElementById('inputClass').value;
-    const subClassSelect = document.getElementById('inputSubclass');
-    subClassSelect.innerHTML = '';
-
-    
-    const subclasses = {
-        'Artifcier':['Alchemist', 'Armorere','Artilerist', 'Battle Smith'],
-        'Barbarian': ['Path of Berserker','Path of the Totem Warrior'],
-        'Bard': ['College of Lore', 'College of Valor'],
-        'Cleric': ['Knowledge Domain', 'Life Domain','Light Domain','Nature Domain','Tempest Domain','Trickery Domain','War Domain'],
-        'Druid': ['Circle of the Land','Circle of the Moon'],
-        'Fighter': ['Champion','Battle Master', 'Eldritch Knight'],
-        'Monk': ['Way of the Open Hand', 'Way of Shadow','Way of Four Elements'],
-        'Paladin': ['Oath of Devotion','Oath of Ancients','Oath of Vengance'],
-        'Ranger': ['Hunter','Beast Master'],
-        'Rogue': ['Theif','Assassin','Arcane Trickster'],
-        'Sorcerer': ['Draconic Bloodline','WildMagic'],
-        'Warlock': ['Archfey','Great Old One','Feind'],
-        'Wizard': ['School of Abjuration','School of Conjuration','School of Divination','School of Enchantment','School of Evocation','School of Illusion','School of Transmutaion'],
-    };
-
-    if (subclasses[charClass]) {
-        subclasses[charClass].forEach(subclass => {
-            const option = document.createElement('option');
-            option.value = subclass;
-            option.text = subclass;
-            subClassSelect.appendChild(option);
-        });
-    } else {
-        const defaultOption = document.createElement('option');
-        defaultOption.value = '';
-        defaultOption.text = 'No Subclasses Available';
-        subClassSelect.appendChild(defaultOption);
-    }
-    
-
-}
-
 function raceStatBonus(){
     const charRace = document.getElementById('inputRace').value;
     resetBonus();
@@ -157,48 +85,33 @@ function raceStatBonus(){
             displayBonus('conBonus', 2);
             break;
         case 'Elf':
+            displayBonus('dexBonus', 2);
             
         case 'Gnome':
-
+            displayBonus();
+            break;
         case 'Half-Elf':
-
+            displayBonus();
+            break;
         case 'Halflings':
-
+            displayBonus();
+            break;
         case 'Half-Orc':
-
+            displayBonus();
+            break;
         case 'Human':
-
+            displayBonus();
+            break;
         case 'Tiefling':
+            displayBonus();
+            break;
         default:
             break;
     }
 }
 
-function subRaceStatBonus(){
-    const charSubRace = document.getElementById('inputSubrace').value;
-    resetBonus();
-    switch(charSubRace) {
-        case 'Hill Dwarf':
 
-        case 'Mountain Dwarf':
 
-        case 'Dark-Elf(Drow)':
-
-        case 'High-elf':
-
-        case 'Wood-elf':
-
-        case 'Forest Gnome':
-
-        case 'Rock Gnome':
-
-        case 'Lightfoot Halfling':
-
-        case 'Stout Halfling':
-        default:
-            break;
-    }
-}
 
 
 function displayBonus(id, bonus){
@@ -206,7 +119,9 @@ function displayBonus(id, bonus){
     const el = document.getElementById(id);
     el.textContent = `+${bonus}`;
     
+    
 }
+
 
 function resetBonus(){
     const bonusIds = ['strBonus', 'dexBonus', 'conBonus', 'intBonus', 'wisBonus', 'chaBonus'];
