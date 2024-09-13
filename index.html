@@ -37,18 +37,12 @@
             <div class="row justify-content-center">
                 <div class="form-group col-md-4">
                     <label for="inputClass">Class:</label>
-                    <select id="inputClass" class="form-control" onchange="subClassOptions()">
+                    <select id="inputClass" class="form-control">
                         <option selected>Choose Class</option>
                     </select>
                    
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputSubclass">Subclass:</label>
-                    <select id="inputSubclass" class="form-control" required>
-                        <option selected disabled value="">Choose Subclass</option>
-                        <!-- Add subclass options here -->
-                    </select>
-                </div>
+               
                 <div class="form-group col-md-4">
                     <label for="inputBackground">Background:</label>
                     <select id="inputBackground" class="form-control">
@@ -60,17 +54,10 @@
                 <div class="row justify-content-center">
                     <div class="form-group col-md-4">
                         <label for="inputRace">Race:</label>
-                        <select id="inputRace" class="form-control" onchange="subRaceOptions()" onchange="raceStatBonus()">
+                        <select id="inputRace" class="form-control" onchange="raceStatBonus()">
                             <option selected>Choose Race</option>
                         </select>
                         
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputSubrace">Subrace:</label>
-                        <select id="inputSubrace" class="form-control" required>
-                            <option selected disabled value="">Choose Subrace</option>
-                            
-                        </select>
                     </div>               
                     <div class="form-group col-md-4">
                         <label for="inputAlign">Alignment:</label>
