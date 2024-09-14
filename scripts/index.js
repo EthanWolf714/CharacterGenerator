@@ -5,14 +5,10 @@ window.onload = function () {
     subRaceOptions();
     subClassOptions();
 }
-var classes = ['Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorccerer', 'Warlock', 'Wizard'];
-var races = ['Dragonborn', 'Dwarf', 'Elf', 'Gnome', 'Half-elf', 'Halfings', 'Half-orc', 'Human', 'Tiefling'];
 var alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Nuetral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
 
 function populateSelectBox() {
-    var selectClass = document.getElementById('inputClass');
-    var selectRace = document.getElementById('inputRace');
     var selectAlign = document.getElementById('inputAlign');
     var selectBackground = document.getElementById('inputBackground');
     for (var i = 0; i < classes.length; i++) {
