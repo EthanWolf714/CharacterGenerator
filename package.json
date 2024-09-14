@@ -1,0 +1,15 @@
+{
+  "name": "charactergenerator",
+  "version": "1.0.0",
+  "description": "DND Character Generator\r Description: web apge is meant to be a character generator for your dnd campaign, \r either needing characters for npcs or need a character to play this application will\r allow to create an in depth character within a reasonable time, be because writting characters\r can take awhile to make.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
