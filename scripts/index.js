@@ -1,49 +1,11 @@
 
 
 window.onload = function () {
-    populateSelectBox();
-    subRaceOptions();
-    subClassOptions();
+   
 }
-var alignments = ['Lawful Good', 'Neutral Good', 'Chaotic Good', 'Lawful Neutral', 'True Nuetral', 'Chaotic Neutral', 'Lawful Evil', 'Neutral Evil', 'Chaotic Evil'];
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
 
-function populateSelectBox() {
-    var selectAlign = document.getElementById('inputAlign');
-    var selectBackground = document.getElementById('inputBackground');
-    for (var i = 0; i < classes.length; i++) {
-        var opt = classes[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        selectClass.appendChild(el);
-    }
 
-    for (var i = 0; i < races.length; i++) {
-        var opt = races[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        selectRace.appendChild(el);
-    }
-
-    for (var i = 0; i < alignments.length; i++) {
-        var opt = alignments[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        selectAlign.appendChild(el);
-    }
-
-    for (var i = 0; i < backgrounds.length; i++) {
-        var opt = backgrounds[i];
-        var el = document.createElement("option");
-        el.textContent = opt;
-        el.value = opt;
-        selectBackground.appendChild(el);
-    }
-
-}
 
 
 
@@ -126,34 +88,8 @@ function resetBonus(){
     });
 }
 
-function submitCharacter(event){
-    event.preventDefault();
-    const character = {
-        name: document.getElementById('inputName').value,
-        class: document.getElementById('inputClass').value,
-        subclass: document.getElementById('inputSubclass').value,
-        background: document.getElementById('inputBackground').value,
-        race: document.getElementById('inputRace').value,
-        subrace: document.getElementById('inputSubrace').value,
-        alignment: document.getElementById('inputAlign').value,
-        stats: {
-            str: document.getElementById('str').textContent,
-            dex: document.getElementById('dex').textContent ,
-            con: document.getElementById('con').textContent ,
-            int: document.getElementById('int').textContent ,
-            wis: document.getElementById('wis').textContent,
-            cha: document.getElementById('cha').textContent 
-        },
-        statBns: {
-            strBonus: document.getElementById('strBonus').textContent,
-            dexBonus: document.getElementById('dexBonus').textContent,
-            conBonus: document.getElementById('conBonus').textContent,
-            intBonus: document.getElementById('intBonus').textContent,
-            wisBonus: document.getElementById('wisBonus').textContent,
-            chaBonus: document.getElementById('chaBonus').textContent
-        }
-    };
-    localStorage.setItem('character', JSON.stringify(character));
-    window.location.href = 'results.html'; 
-    return false;
+function generateCharacter(event){
+   
 }
+
+
