@@ -20,72 +20,20 @@
                  <h2>Character Generator</h2>
              </div>
          </div>  
-     
-   
-    
-        <form id="character-form" onsubmit="return generateCharacter(event)">
             <div class="form-section">
                 <div class="row justify-content-center">
-                    <div class="form-group col-md-5">
+                    <div class="col-md-5">
                         <label for="inputName">Name:</label>
                         <input type="text" class="form-control" id="inputName" placeholder="Name">
                     </div>
                  </div>
             </div>
-           <div class="form-section">
-            <h4 class="text-center">Character Details</h4>
-            <div class="row justify-content-center">
-                <div class="form-group col-md-3">
-                    <label for="inputClass">Class:</label>
-                    <input type="text" id="inputClass" class="form-control">
-                </div>
-                <div class="form-group col-md-3">
-                    <label for="inputRace">Race:</label>
-                    <input type="text" id="inputRace" class="form-control" onchange="raceStatBonus()">
-                </div> 
-               
-                
-            </div>
-                <div class="row justify-content-center">
-                                  
-                    <div class="form-group col-md-3">
-                        <label for="inputAlign">Alignment:</label>
-                        <select id="inputAlign" class="form-control">
-                            <option selected>Choose Alignment</option>
-                        </select>
-        
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="inputBackground">Background:</label>
-                        <select id="inputBackground" class="form-control">
-                            <option selected>Choose Background</option>
-                        </select>
-        
-                    </div>
-                </div>
-           </div>
-           <div class="form-section">
-             <h4 class="text-center">Character Stats</h4>
-                <div class="row justify-content-center">
-                    <div class=" form-group col-md-1">
-                        <p>Str: <span id="str">-</span> <span id="strBonus"></span></p>
-                        <p>Dex: <span id="dex">-</span> <span id="dexBonus"></span></p>
-                        <p>Con: <span id="con">-</span> <span id="conBonus"></span></p>
-                        <p>Int: <span id="int">-</span> <span id="intBonus"></span></p>
-                        <p>Wis: <span id="wis">-</span> <span id="wisBonus"></span></p>
-                        <p>Cha: <span id="cha">-</span> <span id="chaBonus"></span></p>
-                    </div>
-                </div>
-           </div>
-           
            <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
                     <button type="submit" class="btn btn-primary" onclick="generateCharacter()" onclick="genStats()">Generate Character</button>
 
                 </div>
            </div>
-           
-        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,23 +1,24 @@
 
+let randomRace;
+let randomClass;
 
-window.onload = function () {
-   
-}
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
 
 
+async function fetchData(){
+
+}
 
 
-
-
-function randomStat() {
+/*function randomStat() {
     var stat = [];
     for (var i = 0; i < 4; i++) {
         stat.push(Math.floor(Math.random() * 6) + 1);
     }
     stat.sort((a, b) => b - a);
     return stat[0] + stat[1] + stat[3];
-}
+} 
+
 
 function genStats() {
     document.getElementById('str').innerText = randomStat();
@@ -87,7 +88,7 @@ function resetBonus(){
         document.getElementById(id).textContent = '';
     });
 }
-
+*/
 function generateCharacter(event){
    
 }
