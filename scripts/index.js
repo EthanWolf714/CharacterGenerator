@@ -1,12 +1,38 @@
 
 let randomRace;
 let randomClass;
+let randomAlightment;
+let randomBackground;
+let backgroundData;
+let classData;
+let raceData;
+
 
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
 
+async function getData(url){
+    try{
+        const response = await fetch(url);
+        const data = await response.json(url);
+        return data
+    }catch(error){
+        console.error("Fetch error:", error)
+    }
 
+}
 async function fetchData(){
+    try{
+        const fetchPromises = [
+            getData('https://www.dnd5eapi.co/api/races'),
+            getData('https://www.dnd5eapi.co/api/classes'),
+            getData('https://www.dnd5eapi.co/api/alignments')
+        ];
 
+
+        [randomRace,randomClass] = await Promise.all(fetchPromises)
+    }catch(error){
+        console.error('Error fetching data:', error);
+    }
 }
 
 
