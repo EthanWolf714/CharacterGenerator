@@ -1,0 +1,118 @@
+
+
+body {
+    background-color: #2f3438;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+    color: white;
+    
+}
+h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+}
+
+p.lead{
+    font-size: 2.8rem;
+    color:#ccc;
+}
+.title-Section{
+    padding: 40px 0;
+    text-align: center;
+    color: #f8f9fa;
+
+}
+
+.container {
+    backdrop-filter: blur(5.5px);
+    background-color: rgb(55,60,63,0.8);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width:700px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#title{
+    color: white;
+}
+#inputName{
+    background-color:rgba(255, 255, 255, 0.1);
+    border: 1px solid #6c757d;
+    color:white;
+    padding:10px;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#inputName:focus{
+    border-color:#007bff;;
+    background-color:transparent ;
+    color: white;
+}
+
+#charStats .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#charStats .col p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-right: 5px;
+}
+#charStats .col p strong{
+    padding-left: 5px;
+}
+.name-Section{
+    margin-bottom: 20px;
+}
+.name-Section label{
+    margin-bottom: 15px;
+}
+
+.btn-primary{
+   
+    background-color: transparent;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+.btn-primary:hover{
+    background-color: #2f3438;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover{
+    transform: rotate(10deg) scale(1.1); 
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color:#bbb;
+    font-size:0.9rem;
+}
+
+
+
+

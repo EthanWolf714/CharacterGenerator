@@ -27,7 +27,10 @@ async function fetchData(){
         const fetchPromises = [
             getData('https://www.dnd5eapi.co/api/races'),
             getData('https://www.dnd5eapi.co/api/classes'),
-            getData('https://www.dnd5eapi.co/api/alignments')
+            getData('https://www.dnd5eapi.co/api/alignments'),
+            getData('https://www.dnd5eapi.co/api/ability-scores'),
+            getData('https://www.dnd5eapi.co/api/skills'),
+            getData('https://www.dnd5eapi.co/api/equipment')
         ];
 
 
@@ -37,7 +40,6 @@ async function fetchData(){
     }
 }
 fetchData();
-/*
 function randomStat() {
     var stat = [];
     for (var i = 0; i < 4; i++) {
@@ -46,6 +48,8 @@ function randomStat() {
     stat.sort((a, b) => b - a);
     return stat[0] + stat[1] + stat[3];
 }
+/*
+
 function genStats() {
     document.getElementById('str').innerText = randomStat();
     document.getElementById('dex').innerText = randomStat();
@@ -55,13 +59,7 @@ function genStats() {
     document.getElementById('cha').innerText = randomStat();
     raceStatBonus();
 }
-function displayBonus(id, bonus){
-    console.log(`Displaying bonus for ${id}: +${bonus}`);
-    const el = document.getElementById(id);
-    el.textContent = `+${bonus}`;
-    
-    
-} */
+ */
 function generateCharacter(){
     
     const nameInput = document.getElementById("inputName");
@@ -70,6 +68,12 @@ function generateCharacter(){
     const selectedRace = randomRace.results[Math.floor(Math.random() * randomRace.results.length)].name;
     const selectedAlignment = randomAlignment.results[Math.floor(Math.random() * randomAlignment.results.length)].name;
     const selectedBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    const str = randomStat();
+    const dex = randomStat();
+    const con = randomStat();
+    const int = randomStat();
+    const wis = randomStat();
+    const cha = randomStat();
     const titleDiv = document.getElementById("title");
     const nameDiv = document.getElementById("name");
     if(titleDiv){titleDiv.remove();}
@@ -78,19 +82,29 @@ function generateCharacter(){
     
    const characterInfo =
    `<div id="charName"> 
-        <h3> ${characterName}</h3> 
+        <h3 style="Color: white;"> ${characterName}</h3> 
     </div>
     <div id="charClass"> 
-        <p>Class: <strong>${selectedClass}</strong></p>
+        <p style="Color: white;">Class: <strong>${selectedClass}</strong></p>
     </div>
-    <div>
-        <p>Race: <strong>${selectedRace}</strong></p>
+    <div id="charRace>
+        <p style="Color: white;">Race: <strong>${selectedRace}</strong></p>
     </div>
-    <div>
-        <p>Alignment: <strong>${selectedAlignment}</strong></p>
+    <div id="charAlign">
+        <p style="Color: white;">Alignment: <strong>${selectedAlignment}</strong></p>
     </div>
-    <div>
-        <p>Background: <strong>${selectedBackground}</strong></p>
+    <div id="charBackground">
+        <p style="Color: white;">Background: <strong>${selectedBackground}</strong></p>
+    </div>
+    <div class="row justify-content-center" id="charStats">
+        <div class="col">
+            <p>Str:<strong>${str}</strong></p>
+            <p>Dex:<strong>${dex}</strong></p>
+            <p>Con:<strong>${con}</strong></p>
+            <p>Wis:<strong>${int}</strong></p>
+            <p>Int:<strong>${wis}</strong></p>
+            <p>Char:<strong>${cha}</strong></p>
+        </div>
     </div>`; 
 
 
