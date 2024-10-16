@@ -119,12 +119,16 @@ img:hover{
     transform: rotate(10deg) scale(1.1); 
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color:#bbb;
-    font-size:0.9rem;
+.footer-section{
+    margin-top: 80px;
+    margin-bottom:auto;
+
 }
+
+.footer-section p{
+    font-size: 30px;
+}
+
 
 
 
