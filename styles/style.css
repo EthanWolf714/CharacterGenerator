@@ -98,6 +98,19 @@ p.lead{
     cursor: pointer;
 }
 
+.btn-secondary {
+    background-color: transparent;
+    margin-top: 40px;
+    padding: 12px 30px;
+    border:none;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background-color: #2f3438;
+    cursor: pointer;
+}
+
 img {
     transition: transform 0.3s ease;
 }

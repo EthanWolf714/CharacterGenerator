@@ -7,7 +7,14 @@ let backgroundData;
 let classData;
 let raceData;
 
-const characterInfo = document.getElementById("characterInfo");
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("genBtn").addEventListener("click", function() {
+        generateCharacter();
+    });
+});
+
+
+
 
 
 var backgrounds = ['Acoltye', 'Charlatan', 'Criminal', 'Entertainer', 'Folk hero', 'Guild Artisan', 'Hermit', 'Knight', 'Noble', 'Outlander', 'Pirate', 'Sage', 'Sailor', 'Soldier', 'Urchin'];
@@ -46,7 +53,7 @@ function randomStat() {
         stat.push(Math.floor(Math.random() * 6) + 1);
     }
     stat.sort((a, b) => b - a);
-    return stat[0] + stat[1] + stat[3];
+    return stat[0] + stat[1] + stat[2];
 }
 /*
 
@@ -60,10 +67,14 @@ function genStats() {
     raceStatBonus();
 }
  */
+
+
+
+
 function generateCharacter(){
     
     const nameInput = document.getElementById("inputName");
-    const characterName = nameInput.value;
+    const characterName = nameInput.value || "Unknown Hero";
     const selectedClass = randomClass.results[Math.floor(Math.random() * randomClass.results.length)].name;
     const selectedRace = randomRace.results[Math.floor(Math.random() * randomRace.results.length)].name;
     const selectedAlignment = randomAlignment.results[Math.floor(Math.random() * randomAlignment.results.length)].name;
@@ -76,18 +87,20 @@ function generateCharacter(){
     const cha = randomStat();
     const titleDiv = document.getElementById("title");
     const nameDiv = document.getElementById("name");
+    const diceBtn = document.getElementById("genBtn");
+    if(diceBtn){diceBtn.remove();}
     if(titleDiv){titleDiv.remove();}
     if(nameDiv){nameDiv.remove();}
 
     
-   const characterInfo =
+   const characterHtml =
    `<div id="charName"> 
         <h3 style="Color: white;"> ${characterName}</h3> 
     </div>
     <div id="charClass"> 
         <p style="Color: white;">Class: <strong>${selectedClass}</strong></p>
     </div>
-    <div id="charRace>
+    <div id="charRace">
         <p style="Color: white;">Race: <strong>${selectedRace}</strong></p>
     </div>
     <div id="charAlign">
@@ -105,11 +118,16 @@ function generateCharacter(){
             <p>Int:<strong>${wis}</strong></p>
             <p>Char:<strong>${cha}</strong></p>
         </div>
+    </div>
+    <div>
+        <div>
+            <button onclick="window.location.href = 'index.html';"id="backBtn"class="btn btn-secondary"><i class="bi bi-arrow-bar-left"></i></button>
+        </div>
     </div>`; 
 
 
 
-    document.getElementById('characterInfo').innerHTML = characterInfo;
+    document.getElementById('characterInfo').innerHTML = characterHtml;
      
    
    
