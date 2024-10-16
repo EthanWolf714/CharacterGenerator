@@ -3,6 +3,8 @@ let randomRace;
 let randomClass;
 let randomAlignment;
 let randomBackground;
+let randomEquipment;
+let randomSkills;
 let backgroundData;
 let classData;
 let raceData;
@@ -36,12 +38,11 @@ async function fetchData(){
             getData('https://www.dnd5eapi.co/api/classes'),
             getData('https://www.dnd5eapi.co/api/alignments'),
             getData('https://www.dnd5eapi.co/api/ability-scores'),
-            getData('https://www.dnd5eapi.co/api/skills'),
-            getData('https://www.dnd5eapi.co/api/equipment')
+            
         ];
 
 
-        [randomRace,randomClass,randomAlignment] = await Promise.all(fetchPromises)
+        [randomRace,randomClass,randomAlignment, randomEquipment, backgroundData] = await Promise.all(fetchPromises)
     }catch(error){
         console.error('Error fetching data:', error);
     }
